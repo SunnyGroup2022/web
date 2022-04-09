@@ -8,7 +8,6 @@ import config from '../../config';
  */
 async function userVerify(code) {
   return fetch(`${config.apiUrl}/v1/user/verify?code=${code}`, {
-    credentials: 'include',
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
