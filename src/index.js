@@ -17,7 +17,7 @@ ReactDOM.render(
     <Auth0Provider
       domain="dev-o-49rumg.us.auth0.com"
       clientId="U5nDnyL1JvFFWLw31gszEjybJNbGQLMX"
-      redirectUri="https://master.d20xh16a3gn56c.amplifyapp.com/auth0callback"
+      redirectUri="https://master.d2w5ix9s0dasc.amplifyapp.com/auth0callback"
     >
       <BrowserRouter>
         <Routes>
