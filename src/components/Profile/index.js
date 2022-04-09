@@ -24,7 +24,7 @@ async function getUser(userId, token) {
  * @param {object} body - body
  */
 async function updateUser(userId, token, body) {
-  return fetch(`${apiUrl}/v1/user/${userId}`, {
+  return fetch(`${config.apiUrl}/v1/user/${userId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

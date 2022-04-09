@@ -31,8 +31,8 @@ export default function Auth0Callback() {
       accessToken,
     });
     if (result && result.token && result.userId) {
-      setCookie('userToken', result.token);
-      setCookie('userId', result.userId);
+      setCookie('userToken', result.token, result.expireTime);
+      setCookie('userId', result.userId, result.expireTime);
       navigate('/dashboard');
     } else {
       setErrorMessage('Auth0 error! Please try again later');

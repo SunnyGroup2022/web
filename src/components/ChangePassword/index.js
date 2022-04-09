@@ -41,10 +41,7 @@ const ChangePassword = () => {
     const check = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\\W).{8,20}$');
 
     if (!check.test(password)) {
-      setErrorMessage(`The password must contains at least one lower character, 
-        one upper character, 
-        one digit character, 
-        one special character and must contains at least 8 characters`);
+      setErrorMessage(`At least 8 characters in length, must include lowercase letter, uppercase letter, digit and special character.`);
       return;
     }
 
