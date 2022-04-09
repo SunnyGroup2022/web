@@ -2,12 +2,13 @@ import {useState} from 'react';
 import {useAuth0} from '@auth0/auth0-react';
 import {setCookie} from '../../utils/cookie';
 import {useNavigate} from 'react-router-dom';
+import config from '../../config';
 
 /**
  * @param {object} credentials - credentials
  */
 async function userAuthLogin(credentials) {
-  return fetch('http://localhost:3838/v1/user/auth0Login', {
+  return fetch(`${config.apiUrl}/v1/user/auth0Login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

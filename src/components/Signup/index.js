@@ -2,12 +2,13 @@ import React, {useState, useEffect} from 'react';
 import LoginBtn from '../Common/Auth0Login';
 import {setCookie, getCookie} from '../../utils/cookie';
 import {useNavigate} from 'react-router-dom';
+import config from '../../config';
 
 /**
  * @param {object} userInfo - userInfo
  */
 async function userSignUp(userInfo) {
-  return fetch('http://localhost:3838/v1/user/signUp', {
+  return fetch(`${config.apiUrl}/v1/user/signUp`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import qs from 'qs';
 import {useLocation, useNavigate} from 'react-router-dom';
+import config from '../../config';
 
 /**
  * @param {string} code - code
  */
 async function userVerify(code) {
-  return fetch(`http://localhost:3838/v1/user/verify?code=${code}`, {
+  return fetch(`${config.apiUrl}/v1/user/verify?code=${code}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

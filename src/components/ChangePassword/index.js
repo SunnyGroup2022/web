@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Menu from '../Common/Menu';
 import Head from '../Common/Head';
 import {getCookie} from '../../utils/cookie';
+import config from '../../config';
 
 /**
  * @param {integer} userId - userId
@@ -9,7 +10,7 @@ import {getCookie} from '../../utils/cookie';
  * @param {object} body - body
  */
 async function updateUser(userId, token, body) {
-  return fetch(`http://localhost:3838/v1/user/${userId}`, {
+  return fetch(`${config.apiUrl}/v1/user/${userId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

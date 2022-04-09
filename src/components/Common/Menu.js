@@ -2,13 +2,13 @@ import {getCookie, delCookie} from '../../utils/cookie';
 import Logout from './Logout';
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
-
+import config from '../../config';
 /**
  * @param {integer} userId - userId
  * @param {string} token - token
  */
 async function getUser(userId, token) {
-  return fetch(`http://localhost:3838/v1/user/${userId}`, {
+  return fetch(`${config.apiUrl}/v1/user/${userId}`, {
     method: 'GET',
     headers: {
       'token': token,
@@ -20,7 +20,7 @@ async function getUser(userId, token) {
  * @param {string} token - token
  */
 async function sendmail(token) {
-  return fetch(`http://localhost:3838/v1/user/sendmail`, {
+  return fetch(`${config.apiUrl}/v1/user/sendmail`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

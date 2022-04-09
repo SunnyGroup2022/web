@@ -3,13 +3,14 @@ import Menu from '../Common/Menu';
 import Head from '../Common/Head';
 import {getCookie, delCookie} from '../../utils/cookie';
 import {useNavigate} from 'react-router-dom';
+import config from '../../config';
 
 /**
  * @param {integer} userId - userId
  * @param {string} token - token
  */
 async function getUser(userId, token) {
-  return fetch(`http://localhost:3838/v1/user/${userId}`, {
+  return fetch(`${config.apiUrl}/v1/user/${userId}`, {
     method: 'GET',
     headers: {
       'token': token,
@@ -23,7 +24,7 @@ async function getUser(userId, token) {
  * @param {object} body - body
  */
 async function updateUser(userId, token, body) {
-  return fetch(`http://localhost:3838/v1/user/${userId}`, {
+  return fetch(`${apiUrl}/v1/user/${userId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
