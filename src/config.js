@@ -1,3 +1,3 @@
 export default {
-  apiUrl: 'http://13.112.218.201:3838',
+  apiUrl: 'https://api.sunnyh2022.com',
 };

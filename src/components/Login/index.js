@@ -56,7 +56,7 @@ export default function Login() {
     <div className="text-center signinbox" data-new-gr-c-s-check-loaded="14.1054.0" data-gr-ext-installed>
       <main className="form-signin">
         <form onSubmit={handleSubmit}>
-          <img className="mb-4" src="https://master.d20xh16a3gn56c.amplifyapp.com/static/media/logo.b4ed8b4fd1a1c9833b5f.png" alt="" width={72} height={72} />
+          <img className="mb-4" src="https://master.d2w5ix9s0dasc.amplifyapp.com/static/media/logo.b4ed8b4fd1a1c9833b5f.png" alt="" width={72} height={72} />
           <h1 className="h3 mb-3 fw-normal">Please sign In</h1>
           <div className="form-floating">
             <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" onChange={(e) => setEmail(e.target.value)}/>

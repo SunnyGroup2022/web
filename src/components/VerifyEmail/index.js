@@ -22,20 +22,26 @@ export default function VerifyEmail() {
   const location = useLocation();
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState();
+  const [successMessage, setSuccessMessage] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchVerifyEmailApi = async () => {
       const qsObj = qs.parse(location.search, {ignoreQueryPrefix: true});
       if (!qsObj.code) {
-        setErrorMessage('CODE_INCORRECT');
+        setErrorMessage('Code invalid');
       }
 
       const result = await userVerify(qsObj.code);
       if (result && result.status===1 ) {
-        navigate('/dashboard');
+        setErrorMessage(null);
+        setSuccessMessage('Your email address has been verified');
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 4000);
       } else {
-        setErrorMessage('VERIFICATION FAILED');
+        setSuccessMessage(null);
+        setErrorMessage('Verification failed');
       }
     };
 
@@ -53,6 +59,7 @@ export default function VerifyEmail() {
           </div>
         }
         { errorMessage && <div className="alert alert-danger" role="alert">{ errorMessage }</div> }
+        { successMessage && <div className="alert alert-success" role="alert">{ successMessage }</div> }
       </main>
     </div>
   );
