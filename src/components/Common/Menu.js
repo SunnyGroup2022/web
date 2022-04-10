@@ -9,7 +9,7 @@ import config from '../../config';
  */
 async function getUser(userId, token) {
   return fetch(`${config.apiUrl}/v1/user/${userId}`, {
-    credentials: 'incldue',
+    credentials: 'include',
     method: 'GET',
     headers: {
       'token': token,
@@ -22,7 +22,7 @@ async function getUser(userId, token) {
  */
 async function sendmail(token) {
   return fetch(`${config.apiUrl}/v1/user/sendmail`, {
-    credentials: 'incldue',
+    credentials: 'include',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
