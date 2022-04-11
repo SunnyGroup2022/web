@@ -17,13 +17,6 @@ const Head = () => {
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <div className="navbar-nav">
-        <div className="nav-item text-nowrap">
-          <a className="nav-link px-3" href="#">
-            <Logout/ >
-          </a>
-        </div>
-      </div>
     </header>
   );
 };
