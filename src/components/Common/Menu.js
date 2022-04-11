@@ -3,6 +3,7 @@ import Logout from './Logout';
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import config from '../../config';
+
 /**
  * @param {integer} userId - userId
  * @param {string} token - token
@@ -91,12 +92,12 @@ export default function Menu(props) {
         >
           <div className="position-sticky pt-3">
             <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted" style={{fontSize: '14px'}}>
-              <span>Hi! { props.name || user.name || 'Anonymous'}</span>
+              <span className="fs-6 fw-semibold">{ props.name || user.name || 'Anonymous'}</span>
             </h6>
-            <br/>
+            <hr/>
             <ul className="nav flex-column mb-2">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link" aria-current="page" href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={24}
