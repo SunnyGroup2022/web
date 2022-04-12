@@ -63,7 +63,7 @@ export default function SignUp() {
       setErrorMessage(null);
       navigate('/dashboard');
     } else {
-      setErrorMessage(result && result.message ? result.messages : 'Sign up failed. Please try again later.');
+      setErrorMessage(result && result.message ? result.message : 'Sign up failed. Please try again later.');
     };
   };
 
