@@ -48,7 +48,7 @@ export default function Login() {
       setCookie('userId', result.userId, result.expireTime);
       navigate('/dashboard');
     } else {
-      setErrorMessage('Incorrect email address or password.');
+      setErrorMessage(result && result.message ? result.message : 'Incorrect email address or password.');
     }
   };
 
